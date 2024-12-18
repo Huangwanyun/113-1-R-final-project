@@ -14,3 +14,6 @@ tidy_survey <- survey %>%
   )
 glimpse(gdp_data)
 
+data$your_ordered_factor_column <- factor(data$your_column, levels = c("low", "medium", "high"), ordered = TRUE)
+data$your_numeric_column <- as.numeric(data$your_column)
+
