@@ -12,3 +12,5 @@ tidy_survey <- survey %>%
     sex-ratio-of-death-toll = `死亡人口性比例`,
     crude-death-rate = `粗死亡率`,
   )
+glimpse(gdp_data)
+
