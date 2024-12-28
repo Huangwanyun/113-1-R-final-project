@@ -41,10 +41,23 @@ NTPU_data <- data.frame(
   馬來西亞僑生 = c(116)
 )
 
+NTPU_data <- data.frame(
+  Country = c("印尼僑生", "寮國僑生", "新加坡僑生", "柬埔寨僑生", "汶萊僑生", 
+              "泰國僑生", "緬甸僑生", "菲律賓僑生", "越南僑生", "馬來西亞僑生"),
+  Number_of_People = c(38, 0, 2, 0, 1, 6, 86, 1, 17, 116)
+)
+
 data <- c(38, 0, 2, 0, 1, 6, 86, 1, 17, 116)
 class(data)
 countries <- c("印尼僑生", "寮國僑生", "新加坡僑生", "柬埔寨僑生", "汶萊僑生", 
                "泰國僑生", "緬甸僑生", "菲律賓僑生", "越南僑生", "馬來西亞僑生")
 class(countries)
 
+# 計算總人數
+total_population <- sum(NTPU_data$Number_of_People)
 
+# 計算每個國家的人數比例
+NTPU_data$Proportion <- NTPU_data$Number_of_People / total_population
+
+# 顯示結果
+print(NTPU_data)
